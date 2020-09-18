@@ -49,8 +49,18 @@ const name = "jerry"; ===> Error (re-declaring and re-assigning a constant varia
     - Dates
 
 # Type Conversion: *Explicit Conversion of datatypes* 
-1. to String: String(20) => "20", String([1,2,3,4]).length => 7, String(true) => "true", x.toString() => "x"
-2. to Number: Number("20") => 20, parseInt("20.648") => 20, parseFloat("20.648") => 20.648, x.toFixed(2) = 20.64, Number("872y8") => NaN, Number(array) => NaN
+1. **to String:**
+    - String(20) => "20"
+    - String([1,2,3,4]).length => 7
+    - String(true) => "true"
+    - x.toString() => "x"
+2. **to Number:**
+    - Number("20") => 20
+    - parseInt("20.648") => 20
+    - parseFloat("20.648") => 20.648
+    - x.toFixed(2) = 20.64
+    - Number("872y8") => NaN
+    - Number(array) => NaN
 
 # Type Coercion: *Implicit Conversion of datatypes* 
 1. "213" + 74 => 21374
