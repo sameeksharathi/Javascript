@@ -1,4 +1,4 @@
-# Console 
+# Console: 
 The console object provides access to the browser's debugging console (e.g. the Console in Chrome). The specifics of how it works varies from browser to browser. <br>
 The console object can be accessed from any global object like window.console but it can be referenced as simply console.<br>
 **Console** is an **object** and **log** is a **method of console**. <br>
