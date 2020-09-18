@@ -1,1 +1,1 @@
-# Javascript-Fundamental-to-Functional
+# Javascript! Fundamental to Functional
