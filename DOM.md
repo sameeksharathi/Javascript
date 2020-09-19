@@ -31,10 +31,11 @@ Array.from(a).forEach(function(element){<br>
 #Print all the elements in a. <br>
 
 ## DOM Element Selector
+
 **element = document.getElementById("id");**<br>
 element = element.ClassName;<br>
 element = element.childNodes; This contains elements, text, comments, etc<br>
-element = element.children;  This contains only elements like <h1>, <div>, etc<br>
+element = element.children;  This contains only elements like h1, div, etc<br>
 element = element.parentNode;<br>
 element.style.color = "red";<br>
 element.innerText = "Hey! Good Morning";<br>
@@ -50,6 +51,7 @@ element = element.childNodes[i].nodeType;<br>
 4. Comment - 8<br>
 5. document - 9<br>
 6. doctype - 10<br>
+
 <br>
 element = element.firstChild;<br>
 element = element.firstElementChild;<br>
