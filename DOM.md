@@ -16,23 +16,23 @@ Document is an Object and a part of window. **Window object is a global object**
 It has a Tree structure. It has Child.<br>
 document.all looks like an array but is not. We cannot access the elements inside document using arr.forEach() otherwise it will give an error.<br>
 e.g.,<br>
-1. a = document.all   <br>
-//a is an HTML Collectio <br>
-a.forEach(function(element){<br>
-    concole.log(element);<br>
-});             <br>
-#ERROR! a.forEach is not a function.<br>
+1. <pre>a = document.all   
+<!-- is an HTML Collection -->
+a.forEach(function(element){
+    concole.log(element);
+});           
+#ERROR! a.forEach is not a function.</pre>
 
-2. a = document.all <br>
-//a is an HTML Collection and converting a to array using Array.from() <br>
-Array.from(a).forEach(function(element){<br>
-    concole.log(element);<br>
-});             <br>
-#Print all the elements in a. <br>
+2. <pre>a = document.all 
+<!-- a is an HTML Collection and converting a to array using Array.from()  -->
+Array.from(a).forEach(function(element){
+    concole.log(element);
+});             
+#Print all the elements in a. </pre>
 
 ## DOM Element Selector
 
-**element = document.getElementById("id");**<br>
+<h4>element = document.getElementById("id");</h4>
 element = element.ClassName;<br>
 element = element.childNodes; This contains elements, text, comments, etc<br>
 element = element.children;  This contains only elements like h1, div, etc<br>
@@ -62,10 +62,10 @@ element = element.firstElementChild.nextSibling : nextSibling is something which
 element = element.firstElementChild.nextElementSibling : nextElementSibling is the next Element of the selected child.<br>
 <br>
 
-<h4>element = document.querySelector("#id")**</h4>
-<h4>element = document.querySelectorAll(".class")**</h4>
-<h4>element = document.getElementsByClassName("class")** *-Array of Classes* </h4>
-<h4>childElement = element.getElementsByClassName("childClass")**</h4>
+<h4>element = document.querySelector("#id")</h4>
+<h4>element = document.querySelectorAll(".class")</h4>
+<h4>element = document.getElementsByClassName("class") <h6><i>Array of Classes</i></h6> </h4> 
+<h4>childElement = element.getElementsByClassName("childClass")</h4>
 <h4>element = document.getElementByTagName("tag")**</h4>
 
 
@@ -85,6 +85,7 @@ element.innerText = "Hey!"
 element.innerHTML = "<b>Hey!</b>"
 or
 let text = document.createTextNode("Hey!");
+
 element.appendChild(text);
 
 let ul = document.querySelector('ul');
