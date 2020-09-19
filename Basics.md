@@ -62,5 +62,7 @@ const name = "jerry"; ===> Error (re-declaring and re-assigning a constant varia
     - Number("872y8") => NaN
     - Number(array) => NaN
 
-# Type Coercion: *Implicit Conversion of datatypes* 
+### Type Coercion: *Implicit Conversion of datatypes* 
 1. "213" + 74 => 21374
+
+# 
