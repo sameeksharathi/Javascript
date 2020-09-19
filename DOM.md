@@ -43,7 +43,7 @@ element.innerHTML = "<b>Hey! Good Morning</b>";<br>
 element = element.childNodes[i].nodeName;<br>
 element = element.childNodes[i].nodeType;<br>
 
-##### Types of NodeType:
+### Types of NodeType:
 
 1. Element - 1 <br>
 2. Attribute - 2<br>
@@ -60,12 +60,13 @@ element = element.lastElementChild;<br>
 Count = element.childElementCount;<br>
 element = element.firstElementChild.nextSibling : nextSibling is something which is next to the selected child.<br>
 element = element.firstElementChild.nextElementSibling : nextElementSibling is the next Element of the selected child.<br>
+<br>
 
-**element = document.querySelector("#id")**<br>
-**element = document.querySelectorAll(".class")**<br>
-**element = document.getElementsByClassName("class")** *-Array of Classes* <br>
-**childElement = element.getElementsByClassName("childClass")**<br>
-**element = document.getElementByTagName("tag")**<br>
+<h4>element = document.querySelector("#id")**</h4>
+<h4>element = document.querySelectorAll(".class")**</h4>
+<h4>element = document.getElementsByClassName("class")** *-Array of Classes* </h4>
+<h4>childElement = element.getElementsByClassName("childClass")**</h4>
+<h4>element = document.getElementByTagName("tag")**</h4>
 
 
 ## Create, Remove and Replace Element:
