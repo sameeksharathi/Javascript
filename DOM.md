@@ -32,5 +32,17 @@ Array.from(a).forEach(function(element){<br>
 });             <br>
 #Print all the elements in a. <br>
 
+# DOM Element Selector
+**element = document.getElementById("id");**<br>
+element = element.ClassName;<br>
+element = element.childNodes; <br>
+element = element.parentNode;<br>
+element.style.color = "red";<br>
+element.innerText = "Hey! Good Morning";<br>
+element.innerHTML = "<b>Hey! Good Morning</b>";<br>
 
-
+**element = document.querySelector("#id")**<br>
+**element = document.querySelectorAll(".class")**<br>
+**element = document.getElementsByClassName("class")** *-Array of Classes* <br>
+**childElement = element.getElementsByClassName("childClass")**<br>
+**element = document.getElementByTagName("tag")**<br>
