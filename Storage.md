@@ -1,6 +1,5 @@
 # Local Storage
-It will always be available in the storage of browser until be itself clear it.
-
+**It will always be available in the storage of browser until be itself clear it.**
 <pre>
 var array = ['CN', 'Pogo', 'Nick'];
 
@@ -18,7 +17,7 @@ Storage.clear();
 
 
 # Session Storage
-It will not be available in the storage of browser once we close the browser.
+**It will not be available in the storage of browser once we close the browser.**
 
 <pre>
 var sarray = ['CN', 'Pogo', 'Nick'];

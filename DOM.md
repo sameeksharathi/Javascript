@@ -17,16 +17,16 @@ It has a Tree structure. It has Child.<br>
 document.all looks like an array but is not. We cannot access the elements inside document using arr.forEach() otherwise it will give an error.<br>
 e.g.,<br>
 1. <pre>a = document.all     // a is an HTML Collection
-a.forEach(function(element){
-    concole.log(element);
-});           
-#ERROR! a.forEach is not a function.</pre>
+    a.forEach(function(element){
+        console.log(element);
+    });            // ERROR! a.forEach is not a function.
+    </pre>
 
 2. <pre>a = document.all    // a is an HTML Collection and converting a to array using Array.from() 
-Array.from(a).forEach(function(element){
-    concole.log(element);
-});             
-#Print all the elements in a. </pre>
+    Array.from(a).forEach(function(element){
+        console.log(element);
+    });              // Print all the elements in a. 
+    </pre>
 
 ## DOM Element Selector
 
