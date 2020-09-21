@@ -65,4 +65,32 @@ const name = "jerry"; ===> Error (re-declaring and re-assigning a constant varia
 ### Type Coercion: *Implicit Conversion of datatypes* 
 1. "213" + 74 => 21374
 
-# 
+# Date Object
+
+<pre>
+    let today = new Date();
+    cosole.log(today);
+
+    let otherdate = new Date(mm dd yy time)   \\ Time is optional
+
+    let otherday = otherdate.getDay();
+    console.log(otherday);    \\ day
+    let date = otherdate.getDate();
+    console.log(date);     \\ dd
+
+    let min = otherdate.getMinutes();
+    console.log(min);     \\ min
+
+    let seconds = otherdate.getSeconds(); or Milliseconds();
+    console.log(seconds);     \\ sec
+
+    let hr = otherdate.getHours();
+    console.log(hr);     \\ dd
+
+    let timestamp = otherdate.getTime();
+    console.log(timestamp);     \\ time from the given date till now.
+
+    otherdate.setDate(20);
+    otherdate.setMonth(0);
+    otherdate.setFullYear(2020); \\ also set minutes hours seconds 
+</pre>
