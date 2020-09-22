@@ -17,4 +17,124 @@ Multiple clients can sent request to the server and will be responded as soon (i
 
 1. Async / Awaits
 2. Callbacks
-3. Promises 
+3. Promises
+
+
+### Callbacks
+
+<pre>
+
+// Pretend that this response is coming from the server
+const students = [
+    {name: "Tom", subject: "JavaScript"},
+    {name: "Jerry", subject: "Machine Learning"}
+]
+
+
+function enrollStudent(student, callback){
+    setTimeout(function() {
+        students.push(student);
+        console.log("Student has been enrolled");
+        callback();
+    }, 1000);
+}
+
+function getStudents(){
+    setTimeout(function() {
+        let str = "";
+        students.forEach(function(student){
+            str += `<li> ${student.name}</li>`
+        });
+        document.getElementById('students').innerHTML = str;
+        console.log("Students have been fetched");
+    }, 5000);
+}
+
+let newStudent = {name:"Matt", subject:"Python"}
+enrollStudent(newStudent, getStudents);
+// getStudents();
+
+</pre>
+
+
+### Promises
+
+#### Code1:
+
+<pre>
+// Promise: Have 3 kind of results
+// -resolve
+// -reject
+// -pending
+
+function func1() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            const error = true;
+            if (!error) {
+                console.log('Function: Your promise has been resolved')
+                resolve();
+            }
+            else {
+                console.log('Function: Your promise has not been resolved')
+                reject('Sorry not fulfilled');
+            }
+        }, 2000);
+    })
+}
+
+func1().then(function(){
+    console.log("Tom: Thanks for resolving")
+}).catch(function(error){
+    console.log("Tom: Very bad bro. Reason: " + error)
+})
+
+</pre>
+
+#### Code2:
+
+<pre>
+// Pretend that this response is coming from the server
+const students = [
+    { name: "harry", subject: "JavaScript" },
+    { name: "Rohan", subject: "Machine Learning" }
+]
+
+
+function enrollStudent(student) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            students.push(student);
+            console.log("Student has been enrolled");
+            const error = false;
+            if (!error) {
+                resolve();
+            }
+            else {
+                reject();
+            }
+        }, 1000);
+    })
+}
+
+function getStudents() {
+    setTimeout(function () {
+        let str = "";
+        students.forEach(function (student) {
+            str += `<li> ${student.name}</li>`
+        });
+        document.getElementById('students').innerHTML = str;
+        console.log("Students have been fetched");
+    }, 5000);
+}
+
+let newStudent = { name: "Sunny", subject: "Python" }
+enrollStudent(newStudent).then(getStudents).catch(function () {
+    console.log("Some error occured");
+});
+// getStudents();
+
+
+// function inside then is ran as - resolve()
+// function inside catch is ran as - reject()
+</pre>

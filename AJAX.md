@@ -86,8 +86,8 @@ function buttonClickHandler() {
 
 
     // What to do on progress (optional)
-    xhr.onprogress = function(){
-        console.log('On progress');
+    xhr.onprogress = function(){            // can be used to show spin sign of loading.
+        console.log('On progress');     
     }
 
 
@@ -151,5 +151,67 @@ function popHandler() {
     console.log("We are done fetching employees!");
     
 }
+
+</pre>
+
+
+
+
+# Fetch API:
+
+Extended version of AJAX. Now, most people use Fetch API for get and post request actions.<br>
+
+<pre>
+
+// Button with id myBtn
+let myBtn = document.getElementById("myBtn");
+
+// div with id content 
+let content = document.getElementById("content");
+
+// function getData(){
+//     console.log("Started getData")
+//     url = "tom.txt";                    // A txt file named tom is used.
+//     fetch(url).then((response)=>{
+//         console.log("Inside first then")
+//         return response.text();
+//     }).then((data)=>{
+//         console.log("Inside second then")
+//         console.log(data);
+//     })
+// }
+
+function getData(){
+    console.log("Started getData")
+    url = "https://api.github.com/users";
+    fetch(url).then((response)=>{
+        console.log("Inside first then")
+        return response.json();
+    }).then((data)=>{
+        console.log("Inside second then")
+        console.log(data);
+    })
+}
+
+
+function postData(){
+    url = "http://dummy.restapiexample.com/api/v1/create";
+    data = '{"name":"TOM","salary":"123","age":"23"}'
+    params = {
+        method:'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: data
+    }
+    fetch(url, params).then(response=> response.json())
+    .then(data => console.log(data)
+    )
+}
+
+// console.log("Before running getData")
+// getData()
+// console.log("After running getData")
+postData()
 
 </pre>
