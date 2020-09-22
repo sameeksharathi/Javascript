@@ -20,6 +20,36 @@ Multiple clients can sent request to the server and will be responded as soon (i
 3. Promises
 
 
+
+### Async / Awaits
+
+**Async always returns a Promise** which means we can use resolve() and there is no need to use 2 thens as we did in Fetch API => <a href = "FretchApi.js">Fetch API Js file</a>.
+
+<pre>
+
+async function tom(){
+    console.log('Inside tom function');
+    const response = await fetch('https://api.github.com/users');
+    console.log('before response');
+    const users = await response.json();
+    console.log('users resolved')
+    return users;
+
+    // return "tom";
+}
+
+console.log("Before calling tom")
+let a = tom();
+console.log("After calling tom")
+console.log(a);
+a.then(data => console.log(data))
+console.log("Last line of this js file")
+
+</pre>
+
+
+
+
 ### Callbacks
 
 <pre>
@@ -55,6 +85,8 @@ enrollStudent(newStudent, getStudents);
 // getStudents();
 
 </pre>
+
+
 
 
 ### Promises
