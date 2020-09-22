@@ -56,20 +56,20 @@ const proto = {
     }
 }
 
-// This creates harry object
-let harry = Object.create(proto);
-harry.name = "harry";
-harry.role = "Programmer";
-// harry.changeName("Harry2")
-// console.log(harry)
+// This creates tom object
+let tom = Object.create(proto);
+tom.name = "tom";
+tom.role = "Programmer";
+// tom.changeName("tom2")
+// console.log(tom)
 
-// This also creates harry object
+// This also creates tom object
 const harry1 = Object.create(proto, {
-    name: { value: "harry", writable: true },
+    name: { value: "tom", writable: true },   // writable is used for calling changeName function.
     role: { value: "Programmer" },
 });
-harry1.changeName("Harry2")
-// console.log(harry1)
+harry1.changeName("Tom2")
+// console.log(tom1)
 
 // Employee constructor
 function Employee(name, salary, experience) {
@@ -84,12 +84,12 @@ Employee.prototype.slogan = function () {
 }
 
 // Create an object from this constructor now
-let harryObj = new Employee("Harry", 345099, 87);
-console.log(harryObj.slogan())
+let TomObj = new Employee("Tom", 345099, 87);
+console.log(TomObj.slogan())
 
-// Programmer
+// Programmer    
 function Programmer(name, salary, experience, language) {
-    Employee.call(this, name, salary, experience);
+    Employee.call(this, name, salary, experience);      // Inheritance from Employee constructor
     this.language = language;
 }
 
@@ -99,6 +99,6 @@ Programmer.prototype = Object.create(Employee.prototype);
 // Manually set the constructor
 Programmer.prototype.constructor = Programmer;
 
-let rohan = new Programmer("Rohan", 2, 0, "Javascript");
-console.log(rohan);
+let jerry = new Programmer("Jerry", 2315125, 1, "Javascript");
+console.log(jerry);
 </pre>
